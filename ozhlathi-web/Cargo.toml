@@ -1,0 +1,14 @@
+[package]
+name = "ozhlathi-web"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.24"
+lazy_static = "1.4.0"
+ozhlathi-base = { path = "../ozhlathi-base" }
+rocket = { version = "0.5.0-rc.3", features = ["json"] }
+rocket_cors = "0.6.0-alpha2"
+serde = { version = "1.0.160", features = ["derive"] }

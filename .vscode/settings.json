@@ -1,0 +1,7 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\ozhlathi-client\\Cargo.toml",
+        ".\\ozhlathi-base\\Cargo.toml",
+        ".\\ozhlathi-web\\Cargo.toml"
+    ]
+}

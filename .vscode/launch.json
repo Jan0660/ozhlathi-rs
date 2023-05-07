@@ -1,0 +1,86 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'ozhlathi-client'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ozhlathi-client",
+                    "--package=ozhlathi-client",
+                    "--manifest-path=${workspaceRoot}/ozhlathi-client/Cargo.toml",
+                ],
+                "filter": {
+                    "name": "ozhlathi-client",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--webUrl", "http://localhost:8194", "--name", "janm via Rust"],
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'ozhlathi-client'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=ozhlathi-client",
+                    "--package=ozhlathi-client",
+                    "--manifest-path=${workspaceRoot}/ozhlathi-client/Cargo.toml",
+                ],
+                "filter": {
+                    "name": "ozhlathi-client",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'ozhlathi-web'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ozhlathi-web",
+                    "--package=ozhlathi-web",
+                    "--manifest-path=${workspaceRoot}/ozhlathi-web/Cargo.toml",
+                ],
+                "filter": {
+                    "name": "ozhlathi-web",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--webUrl", "http://localhost:8194", "--name", "janm via Rust"],
+            "cwd": "${workspaceRoot}/ozhlathi-web"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'ozhlathi-web'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=ozhlathi-web",
+                    "--package=ozhlathi-web",
+                    "--manifest-path=${workspaceRoot}/ozhlathi-web/Cargo.toml",
+                ],
+                "filter": {
+                    "name": "ozhlathi-web",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}/ozhlathi-web"
+        },
+    ]
+}
