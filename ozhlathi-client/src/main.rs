@@ -10,6 +10,8 @@ struct CliArgs {
     web_url: String,
     #[arg(long = "name")]
     name: String,
+    #[arg(long = "password", default_value = "")]
+    password: String,
 }
 
 fn main() {
@@ -47,6 +49,7 @@ fn main() {
                     free_swap: swap_free,
                 },
             })
+            .header("Authorization", args.password.clone())
             .send()
             .expect("Failed to send report");
 
