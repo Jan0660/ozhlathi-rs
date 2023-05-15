@@ -78,7 +78,7 @@ fn notifications(_authed: Authenticated) -> Json<Vec<Notification>> {
         notifications.push(Notification {
             color: {
                 if (status.timestamp.unwrap() - chrono::Utc::now().timestamp()).abs() > 60 * 10 {
-                    "red".to_string()
+                    "violentRed".to_string()
                 } else {
                     "green".to_string()
                 }
